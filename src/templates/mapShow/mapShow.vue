@@ -16,7 +16,7 @@
         </el-form-item>
         <el-form-item>
           <el-input v-model="form.GJZ" placeholder="请输入关键字查询"></el-input>
-        </el-form-item>>
+        </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="onSubmit">查询</el-button>
         </el-form-item>
