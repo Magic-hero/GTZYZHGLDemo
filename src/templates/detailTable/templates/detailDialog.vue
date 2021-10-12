@@ -15,10 +15,10 @@
       </el-col>
       <el-col :span="12">
         <el-tabs type="border-card" :style="{height:  leftBarHeight}" style="overflow:auto">
-          <el-tab-pane label="审批信息">
+          <el-tab-pane label="详细信息">
             <SPForm :msg-val="this.msgVal"></SPForm>
           </el-tab-pane>
-          <el-tab-pane label="供应信息">
+          <!-- <el-tab-pane label="供应信息">
             <GYForm></GYForm>
           </el-tab-pane>
           <el-tab-pane label="使用情况">
@@ -29,8 +29,8 @@
           </el-tab-pane>
           <el-tab-pane label="违法用地查处">
             <WFYDForm></WFYDForm>
-          </el-tab-pane>
-          <el-tab-pane label="用地时间线">
+          </el-tab-pane> -->
+          <el-tab-pane label="现场照片">
             <ydsjxBar></ydsjxBar>
           </el-tab-pane>
         </el-tabs>

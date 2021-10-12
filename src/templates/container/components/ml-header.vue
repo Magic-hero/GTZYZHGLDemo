@@ -1,8 +1,8 @@
 <template>
   <div class="header" ref="header">
     <div class="main-menu">
-      <img class="logo" src="./images/logo.png" alt="贵州省土地全生命周期可视化系统" title="贵州省土地全生命周期可视化系统" draggable="false" />
-      <span class="float-left" @click="jumpToFirstPage">贵州省土地全生命周期可视化系统</span>
+      <img class="logo" src="./images/logo.png" alt="贵州省建设用地起底大调查成果展现平台" title="贵州省建设用地起底大调查成果展现平台" draggable="false" />
+      <span class="float-left" @click="jumpToFirstPage">贵州省建设用地起底大调查成果展现平台</span>
       <template v-for="(item, index) in mainMenus">
         <router-link
           class="main-router-item"

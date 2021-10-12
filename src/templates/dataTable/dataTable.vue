@@ -2,10 +2,10 @@
   <div id="dataTable">
     <div class="topBar">
       <el-card class="mainLastYear">
-        <h3>{{showRang}} 期间建设用地季度审批情况</h3>
+        <h3>2021年建设用地起底大调查基本情况</h3>
         <el-divider></el-divider>
         <el-form :inline="true" ref="form" :model="form" label-width="100px">
-          <el-form-item label="统计区间">
+          <!-- <el-form-item label="统计区间">
             <el-date-picker
               v-model="form.yearSelect"
               type="monthrange"
@@ -14,24 +14,24 @@
               start-placeholder="开始日期"
               end-placeholder="结束日期"
             ></el-date-picker>
-          </el-form-item>
+          </el-form-item>-->
           <el-form-item label="区域统计">
             <el-select v-model="form.area" placeholder="请选择查看区域">
-              <el-option label="全省" value="全省"></el-option>
-              <el-option label="贵阳" value="贵阳"></el-option>
+              <el-option label="仁怀" value="仁怀"></el-option>
+              <!-- <el-option label="贵阳" value="贵阳"></el-option>
               <el-option label="遵义" value="遵义"></el-option>
-              <el-option label="毕节" value="毕节"></el-option>
+              <el-option label="毕节" value="毕节"></el-option>-->
             </el-select>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" @click="onSubmit">查询</el-button>
           </el-form-item>
         </el-form>
-        <el-row :gutter="20">
-          <el-col :span="6" v-for="(item,index) in lastYear" :key="index">
+        <el-row type="flex" justify="space-around">
+          <el-col :span="5" v-for="(item,index) in lastYear" :key="index">
             <el-card class="box-card">
               <div slot="header" class="clearfix">
-                <span style="font-weight:bold">第{{item.season}}季度</span>
+                <span style="font-weight:bold">{{item.type}}</span>
                 <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
               </div>
               <div class="showNumber">
@@ -170,22 +170,27 @@ export default {
       },
       lastYear: [
         {
-          season: '一',
+          type: '建设用地审批、供应利用情况调查',
           number: '238',
           fullSize: '3870.65'
         },
         {
-          season: '二',
+          type: '开发区、工业园区建设用地调查',
           number: '238',
           fullSize: '3870.65'
         },
         {
-          season: '三',
+          type: '城镇建设用地开发利用情况调查',
           number: '238',
           fullSize: '3870.65'
         },
         {
-          season: '四',
+          type: '其他建设用地利用状况调查',
+          number: '238',
+          fullSize: '3870.65'
+        },
+        {
+          type: '“三改”建设用地调查',
           number: '238',
           fullSize: '3870.65'
         }
