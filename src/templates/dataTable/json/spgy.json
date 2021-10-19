@@ -1,0 +1,560 @@
+{
+    "tableHead_LY": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "60",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "批次数",
+            "ENG": "pcs",
+            "width": "60",
+            "child": []
+        },
+        {
+            "CHN": "批准图斑面积",
+            "ENG": "pzmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "批而未供",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "批而未征面积",
+                    "ENG": "pewzmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "征而未供面积",
+                    "ENG": "zewgmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "已用未供面积",
+                    "ENG": "yywgmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "未用未供面积",
+                    "ENG": "wywgmj",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "已批已供面积",
+            "ENG": "ypygmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "宗地数",
+            "ENG": "zds",
+            "width": "60",
+            "child": []
+        },
+        {
+            "CHN": "供地图斑面积",
+            "ENG": "gdtbmj",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "供地率",
+            "ENG": "gdl",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "供而未用（疑似闲置）面积",
+            "ENG": "gewymj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "用而未尽",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "已用面积",
+                    "ENG": "yymj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "未用面积",
+                    "ENG": "wymj",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "已供已用面积",
+            "ENG": "ygyymj",
+            "width": "90",
+            "child": []
+        },
+
+        {
+            "CHN": "其他供地面积",
+            "ENG": "qtgdmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "久征不建面积",
+            "ENG": "jzbjmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "久建不完工面积",
+            "ENG": "jjbwmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "批甲供乙面积",
+            "ENG": "pjgymj",
+            "width": "90",
+            "child": []
+        }
+    ],
+    "tableData_LY": [{
+        "xh": "1",
+        "shi": "遵义市",
+        "xian": "仁怀市",
+        "pcs": 128,
+        "pzmj": 4508.527067,
+        "pewzmj": 1310.956555,
+        "zewgmj": 0,
+        "yywgmj": 485.789187,
+        "wywgmj": 825.167368,
+        "yyygmj": 3197.570607,
+        "zds": 996,
+        "gdtbmj": 3637.192855,
+        "gdl": "70.81%",
+        "gewymj": 173.138826,
+        "yymj": 0,
+        "wymj": 422.839602,
+        "ygyymj": 3041.214371,
+        "qtgdmj": 0,
+        "jzbjmj": 0,
+        "jjbwmj": 0,
+        "pjgymj": 194.65
+    }],
+    "tableHead_HP": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "60",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "获批建设用地面积",
+            "ENG": "hpjsydmj",
+            "width": "120",
+            "child": []
+        },
+        {
+            "CHN": "批准机关",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "国务院批准面积",
+                    "ENG": "gwypzmj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "省政府批准面积",
+                    "ENG": "szfpzmj",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "项目类型",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "城市批次面积",
+                    "ENG": "cspcmj",
+                    "width": "60",
+                    "child": []
+                },
+                {
+                    "CHN": "城市分批次面积",
+                    "ENG": "szfpzmj",
+                    "width": "",
+                    "child": []
+                },
+                {
+                    "CHN": "单独选址面积",
+                    "ENG": "ddxzmj",
+                    "width": "",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "分类面积",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "建设用地",
+                    "ENG": "jsyd",
+                    "width": "60",
+                    "child": []
+                },
+                {
+                    "CHN": "农用地",
+                    "ENG": "nyd",
+                    "width": "60",
+                    "child": []
+                },
+                {
+                    "CHN": "未利用地",
+                    "ENG": "wlyd",
+                    "width": "60",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "对应已供应土地面积",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "合计",
+                    "ENG": "hj1",
+                    "width": "120",
+                    "child": []
+                },
+                {
+                    "CHN": "城市分批次供地面积",
+                    "ENG": "csfpcgdmj",
+                    "width": "60",
+                    "child": []
+                },
+                {
+                    "CHN": "单独选址供地面积",
+                    "ENG": "ddxzgdmj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "城市用地供地面积",
+                    "ENG": "csydgdmj",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "批而未供土地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "合计",
+                    "ENG": "hj2",
+                    "width": "120",
+                    "child": []
+                },
+                {
+                    "CHN": "城市分批次供地面积",
+                    "ENG": "csfpcgdmj2",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "单独选址供地面积",
+                    "ENG": "ddxzgdmj2",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "城市用地供地面积",
+                    "ENG": "csydgdmj2",
+                    "width": "60",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "备注",
+            "ENG": "bz",
+            "width": "60",
+            "child": []
+        }
+    ],
+    "tableData_HP": [{
+        "xh": "1",
+        "shi": "遵义市",
+        "xian": "仁怀市",
+        "hpjsydmj": 4508.527067,
+        "gwypzmj": 877.366638,
+        "szfpzmj": 3631.160429,
+        "cspcmj": 0,
+        "csfpcmj": 3357.353022,
+        "ddxzmj": 1151.174045,
+        "jsyd": null,
+        "nyd": null,
+        "wlyd": null,
+        "hj1": 3197.570607,
+        "csfpcgdmj1": 2309.883156,
+        "ddxzgdmj1": 887.687452,
+        "csydgdmj1": 0,
+        "hj2": 1310.956641,
+        "csfpcgdmj2": 1047.470056,
+        "ddxzgdmj2": 263.486585,
+        "csydgdmj2": 0,
+        "bz": null
+    }],
+    "tableHead_GD": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "60",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "供应总量",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "宗",
+                    "ENG": "zong",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "面积",
+                    "ENG": "mj",
+                    "width": "120",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "供应土地来源",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "获批建设用地",
+                    "ENG": "hpjsyd",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "存量用地",
+                    "ENG": "clyd",
+                    "width": "120",
+                    "child": []
+                },
+                {
+                    "CHN": "其它土地",
+                    "ENG": "qttd",
+                    "width": "120",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "供应方式",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "划拨",
+                    "ENG": "hpjsyd",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "出让",
+                    "ENG": "clyd",
+                    "width": "120",
+                    "child": [{
+                            "CHN": "面积",
+                            "ENG": "mj2",
+                            "width": "80",
+                            "child": []
+                        },
+                        {
+                            "CHN": "土地成交价款",
+                            "ENG": "tdcjk",
+                            "width": "80",
+                            "child": []
+                        }
+                    ]
+                },
+                {
+                    "CHN": "租赁",
+                    "ENG": "qttd",
+                    "width": "120",
+                    "child": [{
+                            "CHN": "面积",
+                            "ENG": "mj3",
+                            "width": "80",
+                            "child": []
+                        },
+                        {
+                            "CHN": "租金",
+                            "ENG": "zj",
+                            "width": "80",
+                            "child": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "CHN": "供应土地用途",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "工矿仓储用地",
+                    "ENG": "",
+                    "width": "",
+                    "child": [{
+                            "CHN": "小计",
+                            "ENG": "xj1",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "工业用地",
+                            "ENG": "gyyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "采矿用地",
+                            "ENG": "ckyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "仓储用地",
+                            "ENG": "ccyd",
+                            "width": "",
+                            "child": []
+                        }
+                    ]
+                },
+                {
+                    "CHN": "商服用地",
+                    "ENG": "sfyd",
+                    "width": "",
+                    "child": []
+                },
+                {
+                    "CHN": "住宅用地",
+                    "ENG": "zzyd",
+                    "width": "",
+                    "child": []
+                },
+                {
+                    "CHN": "其他用地",
+                    "ENG": "",
+                    "width": "",
+                    "child": [{
+                            "CHN": "小计",
+                            "ENG": "xj2",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "公共管理与公共服务用地",
+                            "ENG": "ggglyggfwyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "特殊用地",
+                            "ENG": "tsyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "交通运输用地",
+                            "ENG": "jtysyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "水域及水利设施用地",
+                            "ENG": "syjslssyd",
+                            "width": "",
+                            "child": []
+                        },
+                        {
+                            "CHN": "其他土地",
+                            "ENG": "qttd",
+                            "width": "",
+                            "child": []
+                        }
+                    ]
+                },
+                {
+                    "CHN": "备注",
+                    "ENG": "bz",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        }
+    ],
+    "tableData_GD": [{
+        "xh": "1",
+        "shi": "遵义市",
+        "xian": "仁怀市",
+        "zong": 995,
+        "mj": 3637.192855,
+        "hpjsyd": 0,
+        "clyd": 97.692063,
+        "hb": 1816.895506
+    }]
+}

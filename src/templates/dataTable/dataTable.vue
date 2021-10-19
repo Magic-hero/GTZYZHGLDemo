@@ -5,39 +5,25 @@
         <h3>2021年建设用地起底大调查基本情况</h3>
         <el-divider></el-divider>
         <el-form :inline="true" ref="form" :model="form" label-width="100px">
-          <!-- <el-form-item label="统计区间">
-            <el-date-picker
-              v-model="form.yearSelect"
-              type="monthrange"
-              value-format="yyyyMM"
-              range-separator="至"
-              start-placeholder="开始日期"
-              end-placeholder="结束日期"
-            ></el-date-picker>
-          </el-form-item>-->
           <el-form-item label="区域统计">
-            <el-select v-model="form.area" placeholder="请选择查看区域">
+            <el-select v-model="form.area" disabled placeholder="请选择查看区域">
               <el-option label="仁怀" value="仁怀"></el-option>
-              <!-- <el-option label="贵阳" value="贵阳"></el-option>
-              <el-option label="遵义" value="遵义"></el-option>
-              <el-option label="毕节" value="毕节"></el-option>-->
             </el-select>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" @click="onSubmit">查询</el-button>
+            <el-button type="primary" disabled @click="onSubmit">查询</el-button>
           </el-form-item>
         </el-form>
         <el-row type="flex" justify="space-around">
-          <el-col :span="5" v-for="(item,index) in lastYear" :key="index">
+          <el-col :span="4" v-for="(item,index) in lastYear" :key="index">
             <el-card class="box-card">
               <div slot="header" class="clearfix">
                 <span style="font-weight:bold">{{item.type}}</span>
-                <!-- <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button> -->
               </div>
               <div class="showNumber">
-                <P>
-                  {{form.area}}区域审批数目
-                  <span style="color:#9847ff;font-size:24px;font-weight:bold">{{item.number}}</span>条
+                <P style="line-height:35px">
+                  {{form.area}}范围共调查
+                  <span style="color:#9847ff;font-size:24px;font-weight:bold">{{item.number}}</span>处
                 </P>
                 <p style="text-align: right;">
                   涉及土地
@@ -50,21 +36,251 @@
         </el-row>
       </el-card>
     </div>
+
     <!-- <el-row :gutter="20">
       <el-col :span="18" ></el-col>
       <el-col :span="6"  ></el-col>
     </el-row>-->
     <el-card class="leftBottomBar">
-      <div id="cityNumberEcharts"></div>
+      <el-tabs v-model="activeChart" @tab-click="handleClick">
+        <el-tab-pane label="建设用地审批、供应利用情况调查" name="first">
+          <el-carousel height="450px">
+            <el-carousel-item>
+              <h3 class="TjTitle">仁怀市建设用地审批、供应利用情况调查汇总表</h3>
+              <el-table :data="tableData_LY" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in tableHead_LY"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+            <el-carousel-item>
+              <h3 class="TjTitle">仁怀市获批建设用地对应供地调查表</h3>
+              <el-table :data="tableData_HP" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in tableHead_HP"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+            <el-carousel-item>
+              <h3 class="TjTitle">仁怀市供应土地情况统计表</h3>
+              <el-table :data="tableData_GD" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in tableHead_GD"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+          </el-carousel>
+        </el-tab-pane>
+        <el-tab-pane label="开发区、工业园区建设用地调查" name="second">
+          <el-carousel height="450px">
+            <el-carousel-item>
+              <h3 class="TjTitle">贵州仁怀经济开发区建设用地调查汇总表</h3>
+              <el-table :data="kfqTD_js" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in kfqTH_js"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+            <el-carousel-item>
+              <h3 class="TjTitle">贵州仁怀经济开发区建设用地审批、供应利用情况调查汇总表</h3>
+              <el-table :data="kfqTD_SP" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in kfqTH_SP"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+            <el-carousel-item>
+              <h3 class="TjTitle">贵州仁怀经济开发区社会经济数据汇总表</h3>
+              <el-table :data="kfqTD_jj" style="width: 100%">
+                <el-table-column
+                  v-for="(item,index ) in kfqTH_jj"
+                  :key="index"
+                  :prop="item.ENG"
+                  :label="item.CHN"
+                  :width="item.width"
+                >
+                  <el-table-column
+                    v-show="item.child.length!='0'"
+                    v-for="(ite,ind ) in item.child"
+                    :key="ind"
+                    :prop="ite.ENG"
+                    :label="ite.CHN"
+                    :width="ite.width"
+                  >
+                    <el-table-column
+                      v-show="ite.child.length!='0'"
+                      v-for="(it,inw ) in ite.child"
+                      :key="inw"
+                      :prop="it.ENG"
+                      :label="it.CHN"
+                      :width="it.width"
+                    ></el-table-column>
+                  </el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+          </el-carousel>
+        </el-tab-pane>
+        <el-tab-pane label="城镇建设用地开发利用情况调查" name="third">城镇建设用地开发利用情况调查</el-tab-pane>
+        <el-tab-pane label="其他建设用地利用状况调查" name="fourth">其他建设用地利用状况调查</el-tab-pane>
+        <!-- 三改 -->
+        <el-tab-pane label="“三改”建设用地调查" name="fivth">
+          <el-carousel height="450px">
+            <el-carousel-item>
+              <h3 class="TjTitle">仁怀市“三改”建设用地调查统计表</h3>
+              <el-table :data="tableData" style="width: 100%">
+                <el-table-column prop="date" label="序号" width="60"></el-table-column>
+                <el-table-column prop="szjd" label="所在乡镇（街道）"></el-table-column>
+                <el-table-column label="城镇老旧小区" width="120" align="center">
+                  <el-table-column prop="count1" label="数量" align="center"></el-table-column>
+                  <el-table-column prop="area1" label="面积" align="center"></el-table-column>
+                </el-table-column>
+                <el-table-column label="棚户区（城中村）" width="120" align="center">
+                  <el-table-column prop="count2" label="数量" align="center"></el-table-column>
+                  <el-table-column prop="area2" label="面积" align="center"></el-table-column>
+                </el-table-column>
+                <el-table-column label="背街小巷" width="180" align="center">
+                  <el-table-column prop="count3" label="数量" align="center"></el-table-column>
+                  <el-table-column prop="length" label="长度" align="center"></el-table-column>
+                  <el-table-column prop="area3" label="面积" align="center"></el-table-column>
+                </el-table-column>
+              </el-table>
+            </el-carousel-item>
+            <el-carousel-item>
+              <h3 class="TjTitle">仁怀市“三改”用地土地现状用途统计表（单位：公顷）</h3>
+              <el-table :data="tableData2" style="width: 100%;" height="520">
+                <el-table-column prop="yjl" label="一级类名称" width="150" align="center"></el-table-column>
+                <el-table-column prop="ejl" label="二级类名称" width="150" align="center"></el-table-column>
+                <el-table-column label="‘三改’类型" width="120" align="center">
+                  <el-table-column prop="mj1" label="城镇老旧小区" align="center"></el-table-column>
+                  <el-table-column prop="mj2" label="棚户区（城中村）" align="center"></el-table-column>
+                  <el-table-column prop="mj3" label="背街小巷" align="center"></el-table-column>
+                </el-table-column>
+                <el-table-column label="合计" prop="hj" width="120"></el-table-column>
+              </el-table>
+            </el-carousel-item>
+          </el-carousel>
+        </el-tab-pane>
+      </el-tabs>
       <div style="clear: both;"></div>
     </el-card>
     <div class="rightBottomBar">
       <div style="height:100%">
-        <div class="rightCharts borderCom">
+        <!-- <div class="rightCharts borderCom">
           <div id="areaYTEcharts"></div>
-        </div>
+        </div>-->
         <div class="newsBar borderCom">
-          <h3>土地审批最新信息</h3>
+          <h3>建设用地起底大调查统计文档成果下载</h3>
           <div class="newsContainer">
             <ul class="infinite-list" style="overflow:auto">
               <li v-for="(i ,index) in newlist" :key="index" class="infinite-list-item">
@@ -80,82 +296,14 @@
 </template>
 
 <script>
+import { tableData, tableData2 } from './json/sangai.json'
+import { tableHead_LY, tableData_LY, tableHead_HP, tableData_HP, tableHead_GD, tableData_GD } from './json/spgy.json'
+import { kfqTH_js, kfqTD_js, kfqTH_SP, kfqTD_SP, kfqTH_jj, kfqTD_jj } from './json/kfq.json'
 export default {
   data() {
     return {
+      activeChart: 'first',
       newlist: [
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
-        {
-          time: '2020-12-17',
-          title: '贵阳最新组团项目规划调整信息汇总！',
-          jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
-        },
         {
           time: '2020-12-17',
           title: '贵阳最新组团项目规划调整信息汇总！',
@@ -166,171 +314,99 @@ export default {
       showRang: '201701~201908',
       form: {
         yearSelect: [],
-        area: '全省'
+        area: '仁怀'
       },
       lastYear: [
         {
           type: '建设用地审批、供应利用情况调查',
-          number: '238',
-          fullSize: '3870.65'
+          number: '996',
+          fullSize: '3637.19'
         },
         {
           type: '开发区、工业园区建设用地调查',
-          number: '238',
-          fullSize: '3870.65'
+          number: '125',
+          fullSize: '502.33'
         },
         {
           type: '城镇建设用地开发利用情况调查',
-          number: '238',
-          fullSize: '3870.65'
+          number: '',
+          fullSize: ''
         },
         {
           type: '其他建设用地利用状况调查',
-          number: '238',
-          fullSize: '3870.65'
+          number: '',
+          fullSize: ''
         },
         {
           type: '“三改”建设用地调查',
-          number: '238',
-          fullSize: '3870.65'
+          number: '71',
+          fullSize: '110.08'
         }
-      ]
+      ],
+      //三改统计
+      tableData: null,
+      tableData2: null,
+      //批供地审批
+      //利用
+      tableHead_LY: null,
+      tableData_LY: null,
+      //获批
+      tableHead_HP: null,
+      tableData_HP: null,
+      //供地
+      tableHead_GD: null,
+      tableData_GD: null,
+      //开发区
+      //建设
+      kfqTH_js: null,
+      kfqTD_js: null,
+      //审批
+      kfqTH_SP: null,
+      kfqTD_SP: null,
+      //经济
+      kfqTH_jj: null,
+      kfqTD_jj: null
     }
   },
   watch: {
     form: {
       handler(oldValue, newValue) {
-        this.showRang = newValue.yearSelect[0] + '~' + newValue.yearSelect[1]
-        //分市州柱状图
-        this.loadEcharts()
-        //用地性质饼状图
-        this.loadEcharts2()
+        this.form.area = '仁怀'
       },
       deep: true
     }
   },
-  created() {},
+  created() {
+    this.form.area = '仁怀'
+    this.tableData = tableData
+    this.tableData2 = tableData2
+    //利用
+    this.tableHead_LY = tableHead_LY
+    this.tableData_LY = tableData_LY
+    //获批
+    this.tableHead_HP = tableHead_HP
+    this.tableData_HP = tableData_HP
+    //供地
+    this.tableHead_GD = tableHead_GD
+    this.tableData_GD = tableData_GD
+    //开发区
+    this.kfqTH_js = kfqTH_js
+    this.kfqTD_js = kfqTD_js
+    //审批
+    this.kfqTH_SP = kfqTH_SP
+    this.kfqTD_SP = kfqTD_SP
+    //经济
+    this.kfqTH_jj = kfqTH_jj
+    this.kfqTD_jj = kfqTD_jj
+  },
   mounted() {
     //分市州柱状图
-    this.loadEcharts()
-    //用地性质饼状图
-    this.loadEcharts2()
   },
   methods: {
-    loadEcharts2() {
-      let myChart = this.$echarts.init(document.getElementById('areaYTEcharts'))
-      var option = {
-        title: {
-          text: this.showRang + '期间审批土地用地性质',
-          subtext: '虚构数据',
-          left: 'center'
-        },
-        tooltip: {
-          trigger: 'item',
-          formatter: '{a} <br/>{b} : {c} ({d}%)'
-        },
-        legend: {
-          orient: 'vertical',
-          left: 'left',
-          data: ['城镇', '工业', '水利', '交通', '村民建房']
-        },
-        series: [
-          {
-            name: '访问来源',
-            type: 'pie',
-            radius: '55%',
-            center: ['50%', '60%'],
-            data: [
-              { value: 335, name: '城镇' },
-              { value: 310, name: '工业' },
-              { value: 234, name: '水利' },
-              { value: 135, name: '交通' },
-              { value: 1548, name: '村民建房' }
-            ],
-            emphasis: {
-              itemStyle: {
-                shadowBlur: 10,
-                shadowOffsetX: 0,
-                shadowColor: 'rgba(0, 0, 0, 0.5)'
-              }
-            }
-          }
-        ]
-      }
-      myChart.setOption(option)
+    handleClick(tab, event) {
+      console.log(tab, event)
     },
-    onSubmit() {},
-    loadEcharts() {
-      // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById('cityNumberEcharts'))
-      // 绘制图表
-      myChart.setOption({
-        title: { text: this.showRang + '期间各市州土地情况表', subtext: '虚构数据' },
-        grid: {
-          y: 90,
-          borderWidth: 1
-        },
-        color: ['#003366', '#006699', '#4cabce', '#e5323e'],
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'shadow'
-          }
-        },
-        legend: {
-          left: 'right',
-          data: ['审批地块数', '已供地块数', '已用地块数', '查处违法地块数']
-        },
-        toolbox: {
-          show: true,
-          orient: 'vertical',
-          left: 'right',
-          top: 'center',
-          feature: {
-            mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            magicType: { show: true, type: ['line', 'bar', 'stack', 'tiled'] },
-            restore: { show: true },
-            saveAsImage: { show: true }
-          }
-        },
-        xAxis: [
-          {
-            type: 'category',
-            axisTick: { show: false },
-            data: ['贵阳', '六盘水', '遵义', '安顺', '毕节', '铜仁', '黔东南', '黔南', '黔西南']
-          }
-        ],
-        yAxis: [
-          {
-            type: 'value'
-          }
-        ],
-        series: [
-          {
-            name: '审批地块数',
-            type: 'bar',
-            barGap: 0,
-            data: [46, 65, 48, 21, 38, 42, 68, 90, 54]
-          },
-          {
-            name: '已供地块数',
-            type: 'bar',
-            data: [35, 54, 38, 13, 32, 32, 52, 73, 32]
-          },
-          {
-            name: '已用地块数',
-            type: 'bar',
-            data: [18, 25, 22, 8, 21, 16, 29, 54, 18]
-          },
-          {
-            name: '查处违法地块数',
-            type: 'bar',
-            data: [6, 18, 9, 5, 14, 8, 21, 43, 6]
-          }
-        ]
-      })
-    }
+    onSubmit() {}
   }
 }
 </script>
@@ -359,6 +435,10 @@ export default {
   top: 420px;
   width: 60%;
   bottom: 30px;
+  .TjTitle {
+    text-align: center;
+    line-height: 40px;
+  }
   #cityNumberEcharts {
     margin: 10px;
     position: absolute;
@@ -396,7 +476,8 @@ export default {
   }
   .newsBar {
     margin-top: 5px;
-    height: calc(60% - 50px);
+    height: calc(100% - 30px);
+    // height: calc(60% - 50px);
     overflow: hidden;
     .newsContainer {
       overflow: auto;

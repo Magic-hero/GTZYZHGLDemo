@@ -1,0 +1,762 @@
+{
+    "kfqTH_js": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "开发区名称",
+            "ENG": "kfq",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "商业服务业设施用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "物流仓储用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj2",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj2",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj2",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj2",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "工业用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj3",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj3",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj3",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj3",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "采矿用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj4",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj4",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj4",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj4",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "住宅用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj5",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj5",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj5",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj5",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "公用管理与公共服务用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj6",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj6",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj6",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "已建成用地面积",
+                    "ENG": "yjcydmj6",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "交通运输用地",
+            "ENG": "xh",
+            "width": "90",
+            "child": [{
+                    "CHN": "用地面积",
+                    "ENG": "ydmj7",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑面积",
+                    "ENG": "jzmj7",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "建筑基底面积",
+                    "ENG": "jzjdmj7",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "特殊用地面积",
+            "ENG": "tsyd",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "水工建筑用地面积",
+            "ENG": "sgkzyd",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "空闲地面积",
+            "ENG": "kxdmj",
+            "width": "90",
+            "child": []
+        }
+    ],
+    "kfqTD_js": [{
+            "xh": 1,
+            "shi": "遵义市",
+            "xian": "仁怀市经济开发区",
+            "kfq": "国酒产业园区",
+            "ydmj": 0.65,
+            "jzmj": 2.56,
+            "jzjdmj": 0.65,
+            "yjcydmj": 0.65,
+            "ydmj2": 0.00,
+            "jzmj2": 0.00,
+            "jzjdmj2": 0.00,
+            "yjcydmj2": 0.00,
+            "ydmj3": 191.59,
+            "jzmj3": 363.06,
+            "jzjdmj3": 148.86,
+            "yjcydmj3": 148.86,
+            "ydmj4": 0.00,
+            "jzmj4": 0.00,
+            "jzjdmj4": 0.00,
+            "yjcydmj4": 0.00,
+            "ydmj5": 7.02,
+            "jzmj5": 30.29,
+            "jzjdmj5": 7.02,
+            "yjcydmj5": 7.02,
+            "ydmj6": 9.78,
+            "jzmj6": 0.81,
+            "jzjdmj6": 0.45,
+            "yjcydmj6": 0.45,
+            "ydmj7": 20.82,
+            "jzmj7": 0.60,
+            "jzjdmj7": 0.30,
+            "tsyd": 0.18,
+            "sgkzyd": 0.00,
+            "kxdmj": 0.00
+        },
+        {
+            "xh": 2,
+            "shi": "",
+            "xian": "",
+            "kfq": "名酒工业园区",
+            "ydmj": 2.76,
+            "jzmj": 9.88,
+            "jzjdmj": 1.17,
+            "yjcydmj": 1.17,
+            "ydmj2": 0.74,
+            "jzmj2": 0.84,
+            "jzjdmj2": 0.42,
+            "yjcydmj2": 0.42,
+            "ydmj3": 107.48,
+            "jzmj3": 222.58,
+            "jzjdmj3": 71.48,
+            "yjcydmj3": 71.48,
+            "ydmj4": 0.00,
+            "jzmj4": 0.00,
+            "jzjdmj4": 0.00,
+            "yjcydmj4": 0.00,
+            "ydmj5": 32.77,
+            "jzmj5": 50.00,
+            "jzjdmj5": 20.90,
+            "yjcydmj5": 20.90,
+            "ydmj6": 3.57,
+            "jzmj6": 2.15,
+            "jzjdmj6": 1.05,
+            "yjcydmj6": 1.05,
+            "ydmj7": 18.74,
+            "jzmj7": 0.00,
+            "jzjdmj7": 0.00,
+            "tsyd": 0.59,
+            "sgkzyd": 0.11,
+            "kxdmj": 0.00
+        },
+        {
+            "xh": 3,
+            "shi": "",
+            "xian": "",
+            "kfq": "坛厂现代服务园区",
+            "ydmj": 3.04,
+            "jzmj": 1.88,
+            "jzjdmj": 1.08,
+            "yjcydmj": 1.08,
+            "ydmj2": 14.93,
+            "jzmj2": 8.35,
+            "jzjdmj2": 7.00,
+            "yjcydmj2": 7.00,
+            "ydmj3": 92.13,
+            "jzmj3": 66.12,
+            "jzjdmj3": 40.08,
+            "yjcydmj3": 40.08,
+            "ydmj4": 1.55,
+            "jzmj4": 0.00,
+            "jzjdmj4": 0.00,
+            "yjcydmj4": 0.00,
+            "ydmj5": 45.49,
+            "jzmj5": 55.53,
+            "jzjdmj5": 31.02,
+            "yjcydmj5": 30.97,
+            "ydmj6": 3.34,
+            "jzmj6": 1.05,
+            "jzjdmj6": 0.50,
+            "yjcydmj6": 0.50,
+            "ydmj7": 38.82,
+            "jzmj7": 0.52,
+            "jzjdmj7": 0.26,
+            "tsyd": 1.37,
+            "sgkzyd": 0.00,
+            "kxdmj": 4.73
+        }
+    ],
+    "kfqTH_SP": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "开发区（园区）名称",
+            "ENG": "kfq",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "批次数",
+            "ENG": "pcs",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "批准图斑面积",
+            "ENG": "pzmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "批而未供",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "批而未征面积",
+                    "ENG": "pewzmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "征而未供面积",
+                    "ENG": "zewgmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "已用未供面积",
+                    "ENG": "yywgmj",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "未用未供面积",
+                    "ENG": "wywgmj",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "已批已供面积",
+            "ENG": "ypygmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "宗地数",
+            "ENG": "zds",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "供地图斑面积",
+            "ENG": "gdtbmj",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "供地率",
+            "ENG": "gdl",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "供而未用（疑似闲置）面积",
+            "ENG": "gewymj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "用而未尽",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "已用面积",
+                    "ENG": "yymj",
+                    "width": "90",
+                    "child": []
+                },
+                {
+                    "CHN": "未用面积",
+                    "ENG": "wymj",
+                    "width": "90",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "已供已用面积",
+            "ENG": "ygyymj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "其他供地面积",
+            "ENG": "qtgdmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "久征不建面积",
+            "ENG": "jzbjmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "久建不完工面积",
+            "ENG": "jjbwmj",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "批甲供乙面积",
+            "ENG": "pjgymj",
+            "width": "90",
+            "child": []
+        }
+    ],
+    "kfqTD_SP": [{
+        "xh": 1,
+        "shi": "遵义市",
+        "xian": "仁怀市",
+        "kfq": "贵州仁怀经济开发区",
+        "pcs": 38,
+        "pzmj": "502.332821 ",
+        "pewzmj": 62.373773,
+        "zewgmj": 0,
+        "yywgmj": "46.447797 ",
+        "wywgmj": 15.925976,
+        "ypygmj": "439.959048 ",
+        "zds": 125,
+        "gdtbmj": "474.589853 ",
+        "gdl": "87.58%",
+        "gewymj": "7.561674 ",
+        "yymj": "22.357085 ",
+        "wymj": "15.364877 ",
+        "ygyymj": 382.321788,
+        "qtgdmj": "46.984429 ",
+        "jzbjmj": 0,
+        "jjbwmj": 0,
+        "pjgymj": 0
+    }],
+    "kfqTH_jj": [{
+            "CHN": "序号",
+            "ENG": "xh",
+            "width": "90",
+            "child": []
+        },
+        {
+            "CHN": "市",
+            "ENG": "shi",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "县（市、区、特区）",
+            "ENG": "xian",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "开发区（园区）名称",
+            "ENG": "kfq",
+            "width": "80",
+            "child": []
+        },
+        {
+            "CHN": "商业服务业设施用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "企业总收入",
+                    "ENG": "qyzsr",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总税收",
+                    "ENG": "qyzss",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "物流仓储用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "固定资产投资总额",
+                    "ENG": "gdzctzze2",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总收入",
+                    "ENG": "qyzsr2",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总税收",
+                    "ENG": "qyzss2",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总产值",
+                    "ENG": "qyzcz2",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业增加值",
+                    "ENG": "qyzjz2",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "工业用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "固定资产投资总额",
+                    "ENG": "gdzctzze3",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总收入",
+                    "ENG": "qyzsr3",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总税收",
+                    "ENG": "qyzss3",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总产值",
+                    "ENG": "qyzcz3",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业增加值",
+                    "ENG": "qyzjz3",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "采矿用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                    "CHN": "固定资产投资总额",
+                    "ENG": "gdzctzze4",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总收入",
+                    "ENG": "qyzsr4",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总税收",
+                    "ENG": "qyzss4",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业总产值",
+                    "ENG": "qyzcz4",
+                    "width": "80",
+                    "child": []
+                },
+                {
+                    "CHN": "企业增加值",
+                    "ENG": "qyzjz4",
+                    "width": "80",
+                    "child": []
+                }
+            ]
+        },
+        {
+            "CHN": "住宅用地",
+            "ENG": "",
+            "width": "",
+            "child": [{
+                "CHN": "常住人口",
+                "ENG": "qyzjz4",
+                "width": "czrk",
+                "child": []
+            }]
+        }
+    ],
+    "kfqTD_jj": [{
+            "xh": 1,
+            "shi": "遵义市",
+            "xian": "仁怀市经济开发区",
+            "kfq": "国酒产业园区",
+            "qyzsr": 255.00,
+            "qyzss": 26.10,
+            "gdzctzze2": "",
+            "qyzsr2": "",
+            "qyzss2": "",
+            "qyzcz2": "",
+            "qyzjz2": "",
+            "gdzctzze3": 21720000.39,
+            "qyzsr3": 9799324.05,
+            "qyzss3": 138865.16,
+            "qyzcz3": 9799324.05,
+            "qyzjz3": 1077925.62,
+            "gdzctzze4": "",
+            "qyzsr4": "",
+            "qyzss4": "",
+            "qyzcz4": "",
+            "qyzjz4": "",
+            "czrk": 588
+        },
+        {
+            "xh": 2,
+            "shi": "",
+            "xian": "",
+            "kfq": "名酒工业园区",
+            "qyzsr": 6000.00,
+            "qyzss": 2000.00,
+            "gdzctzze2": "",
+            "qyzsr2": "",
+            "qyzss2": "",
+            "qyzcz2": "",
+            "qyzjz2": "",
+            "gdzctzze3": 572820.51,
+            "qyzsr3": 274962.38,
+            "qyzss3": 44651.89,
+            "qyzcz3": 274962.38,
+            "qyzjz3": 54912.34,
+            "gdzctzze4": "",
+            "qyzsr4": "",
+            "qyzss4": "",
+            "qyzcz4": "",
+            "qyzjz4": "",
+            "czrk": 50
+        },
+        {
+            "xh": 3,
+            "shi": "",
+            "xian": "",
+            "kfq": "坛厂现代服务园区",
+            "qyzsr": 525.00,
+            "qyzss": 31.21,
+            "gdzctzze2": 7503.00,
+            "qyzsr2": 5002.00,
+            "qyzss2": 726.00,
+            "qyzcz2": 5002.00,
+            "qyzjz2": 4276.00,
+            "gdzctzze3": 445509.00,
+            "qyzsr3": 157986.78,
+            "qyzss3": 7167.92,
+            "qyzcz3": 157986.78,
+            "qyzjz3": 109042.60,
+            "gdzctzze4": "",
+            "qyzsr4": "",
+            "qyzss4": "",
+            "qyzcz4": "",
+            "qyzjz4": "",
+            "czrk": 1594
+        }
+    ]
+}
