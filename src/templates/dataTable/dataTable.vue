@@ -274,11 +274,11 @@
       </el-tabs>
       <div style="clear: both;"></div>
     </el-card>
-    <div class="rightBottomBar">
+    <!-- <div class="rightBottomBar">
       <div style="height:100%">
         <!-- <div class="rightCharts borderCom">
           <div id="areaYTEcharts"></div>
-        </div>-->
+        </div>
         <div class="newsBar borderCom">
           <h3>建设用地起底大调查统计文档成果下载</h3>
           <div class="newsContainer">
@@ -291,7 +291,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -433,7 +433,8 @@ export default {
   display: inline-block;
   position: absolute;
   top: 420px;
-  width: 60%;
+  left: 30px;
+  right: 30px;
   bottom: 30px;
   .TjTitle {
     text-align: center;

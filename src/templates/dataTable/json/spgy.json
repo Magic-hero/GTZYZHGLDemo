@@ -129,13 +129,13 @@
         {
             "CHN": "久建不完工面积",
             "ENG": "jjbwmj",
-            "width": "90",
+            "width": "",
             "child": []
         },
         {
             "CHN": "批甲供乙面积",
             "ENG": "pjgymj",
-            "width": "90",
+            "width": "",
             "child": []
         }
     ],
