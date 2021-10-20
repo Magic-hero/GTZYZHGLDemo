@@ -42,11 +42,10 @@
       <el-col :span="6"  ></el-col>
     </el-row>-->
     <el-card class="leftBottomBar">
-      <el-tabs v-model="activeChart" @tab-click="handleClick">
+      <el-tabs v-model="activeChart" @tab-click="handleClick" type="border-card">
         <el-tab-pane label="建设用地审批、供应利用情况调查" name="first">
-          <el-carousel height="450px">
-            <el-carousel-item>
-              <h3 class="TjTitle">仁怀市建设用地审批、供应利用情况调查汇总表</h3>
+          <el-tabs type="card">
+            <el-tab-pane label="仁怀市“三改”用地土地现状用途统计表（单位：公顷）">
               <el-table :data="tableData_LY" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in tableHead_LY"
@@ -77,9 +76,8 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-            <el-carousel-item>
-              <h3 class="TjTitle">仁怀市获批建设用地对应供地调查表</h3>
+            </el-tab-pane>
+            <el-tab-pane label="仁怀市获批建设用地对应供地调查表">
               <el-table :data="tableData_HP" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in tableHead_HP"
@@ -110,9 +108,8 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-            <el-carousel-item>
-              <h3 class="TjTitle">仁怀市供应土地情况统计表</h3>
+            </el-tab-pane>
+            <el-tab-pane label="仁怀市供应土地情况统计表">
               <el-table :data="tableData_GD" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in tableHead_GD"
@@ -143,13 +140,12 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-          </el-carousel>
+            </el-tab-pane>
+          </el-tabs>
         </el-tab-pane>
         <el-tab-pane label="开发区、工业园区建设用地调查" name="second">
-          <el-carousel height="450px">
-            <el-carousel-item>
-              <h3 class="TjTitle">贵州仁怀经济开发区建设用地调查汇总表</h3>
+          <el-tabs type="card">
+            <el-tab-pane label="贵州仁怀经济开发区建设用地调查汇总表">
               <el-table :data="kfqTD_js" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in kfqTH_js"
@@ -180,9 +176,8 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-            <el-carousel-item>
-              <h3 class="TjTitle">贵州仁怀经济开发区建设用地审批、供应利用情况调查汇总表</h3>
+            </el-tab-pane>
+            <el-tab-pane label="贵州仁怀经济开发区建设用地审批、供应利用情况调查汇总表">
               <el-table :data="kfqTD_SP" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in kfqTH_SP"
@@ -213,9 +208,8 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-            <el-carousel-item>
-              <h3 class="TjTitle">贵州仁怀经济开发区社会经济数据汇总表(万元)</h3>
+            </el-tab-pane>
+            <el-tab-pane label="贵州仁怀经济开发区社会经济数据汇总表(万元)">
               <el-table :data="kfqTD_jj" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in kfqTH_jj"
@@ -246,16 +240,15 @@
                   </el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-          </el-carousel>
+            </el-tab-pane>
+          </el-tabs>
         </el-tab-pane>
         <el-tab-pane label="城镇建设用地开发利用情况调查" name="third">城镇建设用地开发利用情况调查</el-tab-pane>
         <el-tab-pane label="其他建设用地利用状况调查" name="fourth">其他建设用地利用状况调查</el-tab-pane>
         <!-- 三改 -->
         <el-tab-pane label="“三改”建设用地调查" name="fivth">
-          <el-carousel height="450px">
-            <el-carousel-item>
-              <h3 class="TjTitle">仁怀市“三改”建设用地调查统计表</h3>
+          <el-tabs type="card">
+            <el-tab-pane label="仁怀市“三改”建设用地调查统计表">
               <el-table :data="tableData" style="width: 100%">
                 <el-table-column prop="date" label="序号" width="60"></el-table-column>
                 <el-table-column prop="szjd" label="所在乡镇（街道）"></el-table-column>
@@ -273,10 +266,9 @@
                   <el-table-column prop="area3" label="面积（公顷）" width="150" align="center"></el-table-column>
                 </el-table-column>
               </el-table>
-            </el-carousel-item>
-            <el-carousel-item>
-              <h3 class="TjTitle">仁怀市“三改”用地土地现状用途统计表（单位：公顷）</h3>
-              <el-table :data="tableData2" style="width: 100%;" height="520">
+            </el-tab-pane>
+            <el-tab-pane label="仁怀市“三改”用地土地现状用途统计表（单位：公顷）">
+              <el-table :data="tableData2" style="width: 100%;" height="450">
                 <el-table-column prop="yjl" label="一级类名称" width="150" align="center"></el-table-column>
                 <el-table-column prop="ejl" label="二级类名称" width="150" align="center"></el-table-column>
                 <el-table-column label="‘三改’类型" width="120" align="center">
@@ -286,8 +278,8 @@
                 </el-table-column>
                 <el-table-column label="合计" prop="hj" width="120"></el-table-column>
               </el-table>
-            </el-carousel-item>
-          </el-carousel>
+            </el-tab-pane>
+          </el-tabs>
         </el-tab-pane>
       </el-tabs>
       <div style="clear: both;"></div>
