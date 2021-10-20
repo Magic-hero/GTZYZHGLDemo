@@ -54,6 +54,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -62,6 +63,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -70,6 +72,7 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
@@ -84,6 +87,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -92,6 +96,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -100,6 +105,7 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
@@ -114,6 +120,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -122,6 +129,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -130,6 +138,7 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
@@ -148,6 +157,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -156,6 +166,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -164,6 +175,7 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
@@ -178,6 +190,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -186,6 +199,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -194,13 +208,14 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
               </el-table>
             </el-carousel-item>
             <el-carousel-item>
-              <h3 class="TjTitle">贵州仁怀经济开发区社会经济数据汇总表</h3>
+              <h3 class="TjTitle">贵州仁怀经济开发区社会经济数据汇总表(万元)</h3>
               <el-table :data="kfqTD_jj" style="width: 100%">
                 <el-table-column
                   v-for="(item,index ) in kfqTH_jj"
@@ -208,6 +223,7 @@
                   :prop="item.ENG"
                   :label="item.CHN"
                   :width="item.width"
+                  align="center"
                 >
                   <el-table-column
                     v-show="item.child.length!='0'"
@@ -216,6 +232,7 @@
                     :prop="ite.ENG"
                     :label="ite.CHN"
                     :width="ite.width"
+                    align="center"
                   >
                     <el-table-column
                       v-show="ite.child.length!='0'"
@@ -224,6 +241,7 @@
                       :prop="it.ENG"
                       :label="it.CHN"
                       :width="it.width"
+                      align="center"
                     ></el-table-column>
                   </el-table-column>
                 </el-table-column>
@@ -241,18 +259,18 @@
               <el-table :data="tableData" style="width: 100%">
                 <el-table-column prop="date" label="序号" width="60"></el-table-column>
                 <el-table-column prop="szjd" label="所在乡镇（街道）"></el-table-column>
-                <el-table-column label="城镇老旧小区" width="120" align="center">
-                  <el-table-column prop="count1" label="数量" align="center"></el-table-column>
-                  <el-table-column prop="area1" label="面积" align="center"></el-table-column>
+                <el-table-column label="城镇老旧小区" align="center">
+                  <el-table-column prop="count1" label="数量（个）" align="center"></el-table-column>
+                  <el-table-column prop="area1" label="面积（公顷）" width="150" align="center"></el-table-column>
                 </el-table-column>
-                <el-table-column label="棚户区（城中村）" width="120" align="center">
-                  <el-table-column prop="count2" label="数量" align="center"></el-table-column>
-                  <el-table-column prop="area2" label="面积" align="center"></el-table-column>
+                <el-table-column label="棚户区（城中村）" width="150" align="center">
+                  <el-table-column prop="count2" label="数量（个）" align="center"></el-table-column>
+                  <el-table-column prop="area2" label="面积（公顷）" width="150" align="center"></el-table-column>
                 </el-table-column>
                 <el-table-column label="背街小巷" width="180" align="center">
-                  <el-table-column prop="count3" label="数量" align="center"></el-table-column>
-                  <el-table-column prop="length" label="长度" align="center"></el-table-column>
-                  <el-table-column prop="area3" label="面积" align="center"></el-table-column>
+                  <el-table-column prop="count3" label="数量（个）" align="center"></el-table-column>
+                  <el-table-column prop="length" label="长度（米）" align="center"></el-table-column>
+                  <el-table-column prop="area3" label="面积（公顷）" width="150" align="center"></el-table-column>
                 </el-table-column>
               </el-table>
             </el-carousel-item>
@@ -291,7 +309,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>-->
   </div>
 </template>
 

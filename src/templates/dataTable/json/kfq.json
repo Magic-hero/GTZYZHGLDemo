@@ -14,13 +14,13 @@
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "90",
+            "width": "150",
             "child": []
         },
         {
             "CHN": "开发区名称",
             "ENG": "kfq",
-            "width": "90",
+            "width": "150",
             "child": []
         },
         {
@@ -42,13 +42,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -72,13 +72,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj2",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj2",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -102,13 +102,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj3",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj3",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -132,13 +132,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj4",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj4",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -162,13 +162,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj5",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj5",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -192,13 +192,13 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj6",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已建成用地面积",
                     "ENG": "yjcydmj6",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -222,7 +222,7 @@
                 {
                     "CHN": "建筑基底面积",
                     "ENG": "jzjdmj7",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -364,19 +364,19 @@
         {
             "CHN": "市",
             "ENG": "shi",
-            "width": "80",
+            "width": "90",
             "child": []
         },
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "80",
+            "width": "150",
             "child": []
         },
         {
             "CHN": "开发区（园区）名称",
             "ENG": "kfq",
-            "width": "80",
+            "width": "150",
             "child": []
         },
         {
@@ -388,7 +388,7 @@
         {
             "CHN": "批准图斑面积",
             "ENG": "pzmj",
-            "width": "90",
+            "width": "120",
             "child": []
         },
         {
@@ -398,25 +398,25 @@
             "child": [{
                     "CHN": "批而未征面积",
                     "ENG": "pewzmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "征而未供面积",
                     "ENG": "zewgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已用未供面积",
                     "ENG": "yywgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "未用未供面积",
                     "ENG": "wywgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -436,19 +436,19 @@
         {
             "CHN": "供地图斑面积",
             "ENG": "gdtbmj",
-            "width": "80",
+            "width": "90",
             "child": []
         },
         {
             "CHN": "供地率",
             "ENG": "gdl",
-            "width": "80",
+            "width": "90",
             "child": []
         },
         {
             "CHN": "供而未用（疑似闲置）面积",
             "ENG": "gewymj",
-            "width": "90",
+            "width": "150",
             "child": []
         },
         {
@@ -506,20 +506,20 @@
         "xian": "仁怀市",
         "kfq": "贵州仁怀经济开发区",
         "pcs": 38,
-        "pzmj": "502.332821 ",
-        "pewzmj": 62.373773,
+        "pzmj": 502.3328,
+        "pewzmj": 62.3738,
         "zewgmj": 0,
-        "yywgmj": "46.447797 ",
-        "wywgmj": 15.925976,
-        "ypygmj": "439.959048 ",
+        "yywgmj": 46.4478,
+        "wywgmj": 15.9260,
+        "ypygmj": 439.9590,
         "zds": 125,
-        "gdtbmj": "474.589853 ",
+        "gdtbmj": 474.5898,
         "gdl": "87.58%",
-        "gewymj": "7.561674 ",
-        "yymj": "22.357085 ",
-        "wymj": "15.364877 ",
+        "gewymj": 7.5617,
+        "yymj": 22.3571,
+        "wymj": 15.3649,
         "ygyymj": 382.321788,
-        "qtgdmj": "46.984429 ",
+        "qtgdmj": 46.9844,
         "jzbjmj": 0,
         "jjbwmj": 0,
         "pjgymj": 0
@@ -533,19 +533,19 @@
         {
             "CHN": "市",
             "ENG": "shi",
-            "width": "80",
+            "width": "90",
             "child": []
         },
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "80",
+            "width": "150",
             "child": []
         },
         {
             "CHN": "开发区（园区）名称",
             "ENG": "kfq",
-            "width": "80",
+            "width": "150",
             "child": []
         },
         {
@@ -555,13 +555,13 @@
             "child": [{
                     "CHN": "企业总收入",
                     "ENG": "qyzsr",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总税收",
                     "ENG": "qyzss",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -573,31 +573,31 @@
             "child": [{
                     "CHN": "固定资产投资总额",
                     "ENG": "gdzctzze2",
-                    "width": "80",
+                    "width": "150",
                     "child": []
                 },
                 {
                     "CHN": "企业总收入",
                     "ENG": "qyzsr2",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总税收",
                     "ENG": "qyzss2",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总产值",
                     "ENG": "qyzcz2",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业增加值",
                     "ENG": "qyzjz2",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -609,31 +609,31 @@
             "child": [{
                     "CHN": "固定资产投资总额",
                     "ENG": "gdzctzze3",
-                    "width": "80",
+                    "width": "150",
                     "child": []
                 },
                 {
                     "CHN": "企业总收入",
                     "ENG": "qyzsr3",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总税收",
                     "ENG": "qyzss3",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总产值",
                     "ENG": "qyzcz3",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业增加值",
                     "ENG": "qyzjz3",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -645,31 +645,31 @@
             "child": [{
                     "CHN": "固定资产投资总额",
                     "ENG": "gdzctzze4",
-                    "width": "80",
+                    "width": "150",
                     "child": []
                 },
                 {
                     "CHN": "企业总收入",
                     "ENG": "qyzsr4",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总税收",
                     "ENG": "qyzss4",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业总产值",
                     "ENG": "qyzcz4",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "企业增加值",
                     "ENG": "qyzjz4",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]

@@ -2,7 +2,7 @@
     "tableHead_LY": [{
             "CHN": "序号",
             "ENG": "xh",
-            "width": "60",
+            "width": "80",
             "child": []
         },
         {
@@ -14,13 +14,13 @@
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "80",
+            "width": "150",
             "child": []
         },
         {
             "CHN": "批次数",
             "ENG": "pcs",
-            "width": "60",
+            "width": "80",
             "child": []
         },
         {
@@ -36,25 +36,25 @@
             "child": [{
                     "CHN": "批而未征面积",
                     "ENG": "pewzmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "征而未供面积",
                     "ENG": "zewgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "已用未供面积",
                     "ENG": "yywgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "未用未供面积",
                     "ENG": "wywgmj",
-                    "width": "80",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -68,13 +68,13 @@
         {
             "CHN": "宗地数",
             "ENG": "zds",
-            "width": "60",
+            "width": "80",
             "child": []
         },
         {
             "CHN": "供地图斑面积",
             "ENG": "gdtbmj",
-            "width": "80",
+            "width": "90",
             "child": []
         },
         {
@@ -86,7 +86,7 @@
         {
             "CHN": "供而未用（疑似闲置）面积",
             "ENG": "gewymj",
-            "width": "90",
+            "width": "120",
             "child": []
         },
         {
@@ -144,19 +144,19 @@
         "shi": "遵义市",
         "xian": "仁怀市",
         "pcs": 128,
-        "pzmj": 4508.527067,
-        "pewzmj": 1310.956555,
+        "pzmj": 4508.5271,
+        "pewzmj": 1310.9566,
         "zewgmj": 0,
-        "yywgmj": 485.789187,
-        "wywgmj": 825.167368,
-        "yyygmj": 3197.570607,
+        "yywgmj": 485.7892,
+        "wywgmj": 825.1674,
+        "ypygmj": 3197.5707,
         "zds": 996,
-        "gdtbmj": 3637.192855,
+        "gdtbmj": 3637.1929,
         "gdl": "70.81%",
-        "gewymj": 173.138826,
+        "gewymj": 173.1389,
         "yymj": 0,
-        "wymj": 422.839602,
-        "ygyymj": 3041.214371,
+        "wymj": 422.8396,
+        "ygyymj": 3041.2144,
         "qtgdmj": 0,
         "jzbjmj": 0,
         "jjbwmj": 0,
@@ -165,7 +165,7 @@
     "tableHead_HP": [{
             "CHN": "序号",
             "ENG": "xh",
-            "width": "60",
+            "width": "80",
             "child": []
         },
         {
@@ -177,7 +177,7 @@
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "90",
+            "width": "150",
             "child": []
         },
         {
@@ -193,13 +193,13 @@
             "child": [{
                     "CHN": "国务院批准面积",
                     "ENG": "gwypzmj",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "省政府批准面积",
                     "ENG": "szfpzmj",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 }
             ]
@@ -211,7 +211,7 @@
             "child": [{
                     "CHN": "城市批次面积",
                     "ENG": "cspcmj",
-                    "width": "60",
+                    "width": "120",
                     "child": []
                 },
                 {
@@ -235,19 +235,19 @@
             "child": [{
                     "CHN": "建设用地",
                     "ENG": "jsyd",
-                    "width": "60",
+                    "width": "80",
                     "child": []
                 },
                 {
                     "CHN": "农用地",
                     "ENG": "nyd",
-                    "width": "60",
+                    "width": "80",
                     "child": []
                 },
                 {
                     "CHN": "未利用地",
                     "ENG": "wlyd",
-                    "width": "60",
+                    "width": "80",
                     "child": []
                 }
             ]
@@ -265,13 +265,13 @@
                 {
                     "CHN": "城市分批次供地面积",
                     "ENG": "csfpcgdmj",
-                    "width": "60",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "单独选址供地面积",
                     "ENG": "ddxzgdmj",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
@@ -295,19 +295,19 @@
                 {
                     "CHN": "城市分批次供地面积",
                     "ENG": "csfpcgdmj2",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "单独选址供地面积",
                     "ENG": "ddxzgdmj2",
-                    "width": "90",
+                    "width": "120",
                     "child": []
                 },
                 {
                     "CHN": "城市用地供地面积",
                     "ENG": "csydgdmj2",
-                    "width": "60",
+                    "width": "80",
                     "child": []
                 }
             ]
@@ -315,7 +315,7 @@
         {
             "CHN": "备注",
             "ENG": "bz",
-            "width": "60",
+            "width": "80",
             "child": []
         }
     ],
@@ -323,29 +323,29 @@
         "xh": "1",
         "shi": "遵义市",
         "xian": "仁怀市",
-        "hpjsydmj": 4508.527067,
-        "gwypzmj": 877.366638,
-        "szfpzmj": 3631.160429,
+        "hpjsydmj": 4508.5271,
+        "gwypzmj": 877.3667,
+        "szfpzmj": 3631.1604,
         "cspcmj": 0,
-        "csfpcmj": 3357.353022,
-        "ddxzmj": 1151.174045,
+        "csfpcmj": 3357.3530,
+        "ddxzmj": 1151.1740,
         "jsyd": null,
         "nyd": null,
         "wlyd": null,
-        "hj1": 3197.570607,
-        "csfpcgdmj1": 2309.883156,
-        "ddxzgdmj1": 887.687452,
+        "hj1": 3197.5706,
+        "csfpcgdmj1": 2309.8831,
+        "ddxzgdmj1": 887.6875,
         "csydgdmj1": 0,
-        "hj2": 1310.956641,
-        "csfpcgdmj2": 1047.470056,
-        "ddxzgdmj2": 263.486585,
+        "hj2": 1310.9566,
+        "csfpcgdmj2": 1047.4701,
+        "ddxzgdmj2": 263.4866,
         "csydgdmj2": 0,
         "bz": null
     }],
     "tableHead_GD": [{
             "CHN": "序号",
             "ENG": "xh",
-            "width": "60",
+            "width": "80",
             "child": []
         },
         {
@@ -357,7 +357,7 @@
         {
             "CHN": "县（市、区、特区）",
             "ENG": "xian",
-            "width": "90",
+            "width": "150",
             "child": []
         },
         {
@@ -425,7 +425,7 @@
                         {
                             "CHN": "土地成交价款",
                             "ENG": "tdcjk",
-                            "width": "80",
+                            "width": "120",
                             "child": []
                         }
                     ]
@@ -509,7 +509,7 @@
                         {
                             "CHN": "公共管理与公共服务用地",
                             "ENG": "ggglyggfwyd",
-                            "width": "",
+                            "width": "200",
                             "child": []
                         },
                         {
@@ -521,13 +521,13 @@
                         {
                             "CHN": "交通运输用地",
                             "ENG": "jtysyd",
-                            "width": "",
+                            "width": "120",
                             "child": []
                         },
                         {
                             "CHN": "水域及水利设施用地",
                             "ENG": "syjslssyd",
-                            "width": "",
+                            "width": "150",
                             "child": []
                         },
                         {
@@ -552,9 +552,9 @@
         "shi": "遵义市",
         "xian": "仁怀市",
         "zong": 995,
-        "mj": 3637.192855,
+        "mj": 3637.1926,
         "hpjsyd": 0,
-        "clyd": 97.692063,
-        "hb": 1816.895506
+        "clyd": 97.6921,
+        "hb": 1816.8955
     }]
 }
