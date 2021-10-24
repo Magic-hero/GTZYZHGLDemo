@@ -15,293 +15,136 @@
           </el-form-item>
         </el-form>
         <el-row type="flex" justify="space-around">
-          <el-col :span="4" v-for="(item,index) in lastYear" :key="index">
+          <el-col :span="5" :key="index">
             <el-card class="box-card">
-              <div slot="header" class="clearfix">
-                <span style="font-weight:bold">{{item.type}}</span>
-              </div>
-              <div class="showNumber">
-                <P style="line-height:35px">
-                  {{form.area}}范围共调查
-                  <span style="color:#9847ff;font-size:24px;font-weight:bold">{{item.number}}</span>处
-                </P>
-                <p style="text-align: right;">
-                  涉及土地
-                  <span style="color:#2244ef;font-size:24px;font-weight:bold">{{item.fullSize}}</span>
-                  公顷
-                </p>
-              </div>
+              <el-descriptions class="margin-top" title="开发区、工业园区建设用地调查" :column="1" border>
+                <el-descriptions-item>
+                  <template slot="label">园区范围</template>
+                  <h5>1396.00公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">其中</template>
+                  <h5>国家公告目录范围5.0480平方公里</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">基础库</template>
+                  <h5>批地:40批次，面积522.9400公顷</h5>
+                  <h5>供地:117宗，面积420.2600公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">成果库</template>
+                  <h5>批地:40批次，面积497.5907公顷</h5>
+                  <h5>供地:125宗，面积464.9631公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">调查</template>
+                  <h5>建设用地面积602.2100公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">闲置厂房</template>
+                  <h5>0 个； 0公顷（政府出资）</h5>
+                </el-descriptions-item>
+              </el-descriptions>
+            </el-card>
+          </el-col>
+          <!-- 建设用地审批、供应利用情况调查 -->
+          <el-col :span="5" :key="index">
+            <el-card class="box-card">
+              <el-descriptions class="margin-top" title="建设用地审批、供应利用情况调查" :column="1" border>
+                <el-descriptions-item>
+                  <template slot="label">下发数据</template>
+                  <h5>批地:台账136批次，矢量129批次</h5>
+                  <h5>供地:台账1067宗，矢量866宗</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">基础库</template>
+                  <h5>批地:129批次，面积4552.12公顷</h5>
+                  <h5>供地:1002宗，面积3680.19公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">成果库</template>
+                  <h5>批地:128批次，面积4517.8913公顷</h5>
+                  <h5>供地:995宗，面积3637.17公顷</h5>
+                </el-descriptions-item>
+              </el-descriptions>
+            </el-card>
+          </el-col>
+          <!-- “三改”建设用地调查 -->
+          <el-col :span="5" :key="index">
+            <el-card class="box-card">
+              <el-descriptions class="margin-top" title="“三改”建设用地调查" :column="1" border>
+                <el-descriptions-item>
+                  <template slot="label">调查面积</template>
+                  <h5>3540公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">“三改”范围内</template>
+                  <h5>建设用地面积：110.082公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">城镇老旧小区</template>
+                  <h5>24个；10.5871公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">棚户区</template>
+                  <h5>14个；83.5215公顷（城中村）</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">背街小巷</template>
+                  <h5>33条；45371米</h5>
+                </el-descriptions-item>
+              </el-descriptions>
+            </el-card>
+          </el-col>
+          <!-- 城镇建设用地开发利用情况调查评价 -->
+          <el-col :span="4" :key="index">
+            <el-card class="box-card">
+              <el-descriptions class="margin-top" title="城镇建设用地开发利用情况调查评价" :column="1" border>
+                <el-descriptions-item>
+                  <template slot="label">调查面积</template>
+                  <h5>公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">过渡利用土地</template>
+                  <h5>块；公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">集约利用土地</template>
+                  <h5>块；公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">中度利用土地</template>
+                  <h5>块；公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">低效利用土地</template>
+                  <h5>块；公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">再开发潜力</template>
+                  <h5>公顷</h5>
+                </el-descriptions-item>
+              </el-descriptions>
+            </el-card>
+          </el-col>
+          <!-- 其他建设用地利用状况调查 -->
+          <el-col :span="4" :key="index">
+            <el-card class="box-card">
+              <el-descriptions class="margin-top" title="其他建设用地利用状况调查" :column="1" border>
+                <el-descriptions-item>
+                  <template slot="label">调查面积</template>
+                  <h5>公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
+                  <template slot="label">低效利用土地</template>
+                  <h5>块；公顷</h5>
+                </el-descriptions-item>
+              </el-descriptions>
             </el-card>
           </el-col>
         </el-row>
       </el-card>
     </div>
-
-    <!-- <el-row :gutter="20">
-      <el-col :span="18" ></el-col>
-      <el-col :span="6"  ></el-col>
-    </el-row>-->
-    <el-card class="leftBottomBar">
-      <el-tabs v-model="activeChart" @tab-click="handleClick" type="border-card">
-        <el-tab-pane label="建设用地审批、供应利用情况调查" name="first">
-          <el-tabs type="card">
-            <el-tab-pane label="仁怀市“三改”用地土地现状用途统计表（单位：公顷）">
-              <el-table :data="tableData_LY" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in tableHead_LY"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-            <el-tab-pane label="仁怀市获批建设用地对应供地调查表">
-              <el-table :data="tableData_HP" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in tableHead_HP"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-            <el-tab-pane label="仁怀市供应土地情况统计表">
-              <el-table :data="tableData_GD" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in tableHead_GD"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-          </el-tabs>
-        </el-tab-pane>
-        <el-tab-pane label="开发区、工业园区建设用地调查" name="second">
-          <el-tabs type="card">
-            <el-tab-pane label="贵州仁怀经济开发区建设用地调查汇总表">
-              <el-table :data="kfqTD_js" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in kfqTH_js"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-            <el-tab-pane label="贵州仁怀经济开发区建设用地审批、供应利用情况调查汇总表">
-              <el-table :data="kfqTD_SP" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in kfqTH_SP"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-            <el-tab-pane label="贵州仁怀经济开发区社会经济数据汇总表(万元)">
-              <el-table :data="kfqTD_jj" style="width: 100%">
-                <el-table-column
-                  v-for="(item,index ) in kfqTH_jj"
-                  :key="index"
-                  :prop="item.ENG"
-                  :label="item.CHN"
-                  :width="item.width"
-                  align="center"
-                >
-                  <el-table-column
-                    v-show="item.child.length!='0'"
-                    v-for="(ite,ind ) in item.child"
-                    :key="ind"
-                    :prop="ite.ENG"
-                    :label="ite.CHN"
-                    :width="ite.width"
-                    align="center"
-                  >
-                    <el-table-column
-                      v-show="ite.child.length!='0'"
-                      v-for="(it,inw ) in ite.child"
-                      :key="inw"
-                      :prop="it.ENG"
-                      :label="it.CHN"
-                      :width="it.width"
-                      align="center"
-                    ></el-table-column>
-                  </el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-          </el-tabs>
-        </el-tab-pane>
-        <el-tab-pane label="城镇建设用地开发利用情况调查" name="third">城镇建设用地开发利用情况调查</el-tab-pane>
-        <el-tab-pane label="其他建设用地利用状况调查" name="fourth">其他建设用地利用状况调查</el-tab-pane>
-        <!-- 三改 -->
-        <el-tab-pane label="“三改”建设用地调查" name="fivth">
-          <el-tabs type="card">
-            <el-tab-pane label="仁怀市“三改”建设用地调查统计表">
-              <el-table :data="tableData" style="width: 100%">
-                <el-table-column prop="date" label="序号" width="60"></el-table-column>
-                <el-table-column prop="szjd" label="所在乡镇（街道）"></el-table-column>
-                <el-table-column label="城镇老旧小区" align="center">
-                  <el-table-column prop="count1" label="数量（个）" align="center"></el-table-column>
-                  <el-table-column prop="area1" label="面积（公顷）" width="150" align="center"></el-table-column>
-                </el-table-column>
-                <el-table-column label="棚户区（城中村）" width="150" align="center">
-                  <el-table-column prop="count2" label="数量（个）" align="center"></el-table-column>
-                  <el-table-column prop="area2" label="面积（公顷）" width="150" align="center"></el-table-column>
-                </el-table-column>
-                <el-table-column label="背街小巷" width="180" align="center">
-                  <el-table-column prop="count3" label="数量（个）" align="center"></el-table-column>
-                  <el-table-column prop="length" label="长度（米）" align="center"></el-table-column>
-                  <el-table-column prop="area3" label="面积（公顷）" width="150" align="center"></el-table-column>
-                </el-table-column>
-              </el-table>
-            </el-tab-pane>
-            <el-tab-pane label="仁怀市“三改”用地土地现状用途统计表（单位：公顷）">
-              <el-table :data="tableData2" style="width: 100%;" height="450">
-                <el-table-column prop="yjl" label="一级类名称" width="150" align="center"></el-table-column>
-                <el-table-column prop="ejl" label="二级类名称" width="150" align="center"></el-table-column>
-                <el-table-column label="‘三改’类型" width="120" align="center">
-                  <el-table-column prop="mj1" label="城镇老旧小区" align="center"></el-table-column>
-                  <el-table-column prop="mj2" label="棚户区（城中村）" align="center"></el-table-column>
-                  <el-table-column prop="mj3" label="背街小巷" align="center"></el-table-column>
-                </el-table-column>
-                <el-table-column label="合计" prop="hj" width="120"></el-table-column>
-              </el-table>
-            </el-tab-pane>
-          </el-tabs>
-        </el-tab-pane>
-      </el-tabs>
-      <div style="clear: both;"></div>
-    </el-card>
-    <!-- <div class="rightBottomBar">
-      <div style="height:100%">
-        <!-- <div class="rightCharts borderCom">
-          <div id="areaYTEcharts"></div>
-        </div>
-        <div class="newsBar borderCom">
-          <h3>建设用地起底大调查统计文档成果下载</h3>
-          <div class="newsContainer">
-            <ul class="infinite-list" style="overflow:auto">
-              <li v-for="(i ,index) in newlist" :key="index" class="infinite-list-item">
-                <a target="_blank" :href="i.jumpTo">{{ i.title }}</a>
-                <span style="float:right;margin-right:10px;font-size:12px">{{i.time}}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>-->
   </div>
 </template>
 
@@ -318,7 +161,7 @@ export default {
           time: '2020-12-17',
           title: '贵阳最新组团项目规划调整信息汇总！',
           jumpTo:
-            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZH4NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
+            'https://mp.weixin.qq.com/s?__biz=MzI5MzY0OTMxOA==&mid=2247510546&idx=1&sn=4c90737406303477d1b581064e96eaed&chksm=ec6c04dbdb1b8dcd8866f49a70078acd989dd385024169fee3869692a3da0922cc15cf979e33&mpshare=1&scene=24&srcid=0105AypKGr9qfa0v2cGA0cB1&sharer_sharetime=1609829141012&sharer_shareid=1e71bc0e3279e932c89276afdcadc457&key=aa37eea3a2616ab3726dfcd8cde0018bba0b9a78aeccc9e7558c978dc7d22be557efb75fa4cf0e142f1d2a4c1de1ca4a529aa8d6cf25dc1e3e03124a2c6c19af9778f9545c90f17614ebaa47a97906a0ed714c6b25cf011b07a8dd8413d2cf784c4723899ef61c8b097eb085d6ba008a358a6bd052b4adb41bd140181717cd6d&ascene=14&uin=Mjg4MjE1MDAyOQ%3D%3D&devicetype=Windows+10+x64&version=6300002f&lang=zh_CN&exportkey=AxRhNEteWMdfKC2j%2FMsVI8c%3D&pass_ticket=n5rb4RexikQYkKcZh5NUJeoDRumESY1ZMuUL2LW%2BRtq%2F8aj3MGBKvP8r%2Bqoeh9rY&wx_header=0'
         }
       ],
       showRang: '201701~201908',
