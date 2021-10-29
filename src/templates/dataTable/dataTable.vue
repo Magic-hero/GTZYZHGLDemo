@@ -32,6 +32,10 @@
                   <h5>供地:117宗，面积420.2600公顷</h5>
                 </el-descriptions-item>
                 <el-descriptions-item>
+                  <template slot="label">问题图斑举证</template>
+                  <h5>888块 面积1118.2128公顷</h5>
+                </el-descriptions-item>
+                <el-descriptions-item>
                   <template slot="label">成果库</template>
                   <h5>批地:40批次，面积497.5907公顷</h5>
                   <h5>供地:125宗，面积464.9631公顷</h5>
@@ -55,6 +59,10 @@
                   <template slot="label">下发数据</template>
                   <h5>批地:台账136批次，矢量129批次</h5>
                   <h5>供地:台账1067宗，矢量866宗</h5>
+                </el-descriptions-item>
+                  <el-descriptions-item>
+                  <template slot="label">问题图斑举证</template>
+                  <h5>2411块 面积2891.3831公顷</h5>
                 </el-descriptions-item>
                 <el-descriptions-item>
                   <template slot="label">基础库</template>
